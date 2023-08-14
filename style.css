@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  --bg-color: #001C30;
+  --primary-color: #DAFFFB;
+  --secondary-color: #176B87;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  margin-top: 3rem;
+}
+
+#addTodo {
+  margin-top: 10px;
+  background-color: var(--primary-color);
+  padding: 4px 10px;
+  padding-right: 5px;
+  border-radius: 5px;
+  width: 40vw;
+  display: flex;
+  justify-content:space-between;
+}
+
+#addTodo input[type=text]{
+  border: none;
+  outline: none;
+  width: 80%;
+  background-color: var(--primary-color);
+}
+
+#addTodo button[type=submit] {
+  padding: 0.4rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(21, 162, 255);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#addTodo button[type=submit]:hover {
+  background-color: rgb(21, 162, 255, 0.5);
+  color: var(--primary-color);
+}
+
+#todoItem {
+  margin-top: 20px;
+}
+
+.todo-item {
+  padding: 15px;
+  background-color: var(--secondary-color);
+  border:var(--primary-color) solid 1px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1rem 29rem auto;
+  gap: 0.5em;
+}
+
+.todo-item:nth-child(1n + 1) {
+  border-bottom: none;
+} 
+
+.todo-item:hover {
+  background-color: #64CCC5;
+}
+
+.todo-item input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+}
+
+.todo-item .checked {
+  
+}
+
+.todo-item button {
+  width: 30px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.todo-item button:hover {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
